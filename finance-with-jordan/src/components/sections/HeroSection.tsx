@@ -39,7 +39,7 @@ const HeroSection: React.FC = () => {
             </p>
             
             {/* Trust Indicators */}
-            <div className="flex flex-wrap gap-2 sm:gap-4 mb-6 sm:mb-8">
+            <div className="flex flex-wrap gap-1 sm:gap-3 mb-6 sm:mb-8 justify-start">
               {trustIndicators.map((indicator, index) => {
                 const IconComponent = indicator.icon;
                 return (
@@ -48,12 +48,12 @@ const HeroSection: React.FC = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                    className="flex items-center bg-white px-4 py-3 rounded-full shadow-soft"
+                    className="flex items-center bg-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-soft min-w-[120px] sm:min-w-[140px] text-left"
                   >
-                    <IconComponent className="h-5 w-5 text-secondary-600 mr-2" />
-                    <div>
-                      <span className="text-sm font-medium text-gray-900">{indicator.subtext}</span>
-                      <p className="text-xs text-gray-600">{indicator.text}</p>
+                    <IconComponent className="h-4 w-4 sm:h-5 sm:w-5 text-secondary-600 mr-2" />
+                    <div className="text-left">
+                      <span className="text-xs sm:text-sm font-medium text-gray-900">{indicator.subtext}</span>
+                      <p className="text-xs sm:text-sm text-gray-600 leading-tight whitespace-normal">{indicator.text}</p>
                     </div>
                   </motion.div>
                 );
@@ -101,7 +101,7 @@ const HeroSection: React.FC = () => {
           >
             <div className="relative">
               {/* Main Image Container */}
-              <div className="aspect-square bg-gradient-to-br from-primary-100 to-primary-200 rounded-2xl flex items-center justify-center relative overflow-hidden w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-full lg:h-full mx-auto">
+              <div className="aspect-square bg-gradient-to-br from-primary-100 to-primary-200 rounded-2xl flex items-center justify-center relative overflow-hidden w-72 h-72 sm:w-[26rem] sm:h-[26rem] md:w-[30rem] md:h-[30rem] lg:w-full lg:h-full mx-auto">
                 <img
                   src={jordanPhoto}
                   alt="Jordan - Mortgage Broker"
@@ -124,10 +124,10 @@ const HeroSection: React.FC = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 1.2 }}
-                className="absolute -top-4 -right-4 sm:-top-6 sm:-right-6 bg-white p-4 sm:p-6 rounded-xl shadow-medium"
+                className="absolute -top-3 right-3 mr-2 sm:-top-4 sm:right-4 md:-top-6 md:-right-6 lg:-top-8 lg:-right-8 bg-white p-2 sm:p-3 rounded-xl shadow-medium w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex flex-col items-center justify-center"
               >
-                <div className="text-xl sm:text-3xl font-bold text-secondary-600">4.8★</div>
-                <div className="text-xs sm:text-sm text-gray-600">Client Rating</div>
+                <div className="text-lg sm:text-2xl font-bold text-secondary-600">4.8★</div>
+                <div className="hidden sm:block text-[11px] sm:text-xs text-gray-600">Client Rating</div>
               </motion.div>
             </div>
           </motion.div>
