@@ -3,9 +3,8 @@ import Layout from '@/components/layout/Layout';
 import Home from '@/pages/Home';
 import Services from '@/pages/Services';
 import About from '@/pages/About';
+import Contact from '@/pages/Contact';
 
-// Placeholder components for other pages
-const Contact = () => <div className="py-20 text-center"><h1 className="text-3xl font-bold">Contact - Coming Soon</h1></div>;
 
 function App() {
   return (
