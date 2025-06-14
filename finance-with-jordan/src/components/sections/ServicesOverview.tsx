@@ -1,16 +1,15 @@
-import React from 'react';
-import { 
-  Home, 
-  TrendingUp, 
-  RefreshCw, 
-  Building, 
-  CreditCard, 
+import React from "react";
+import {
+  Home,
+  TrendingUp,
+  RefreshCw,
+  Building,
+  CreditCard,
   PiggyBank,
-  ArrowRight 
-} from 'lucide-react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { SERVICES } from '@/constants';
+  ArrowRight,
+} from "lucide-react";
+import { motion } from "framer-motion";
+import { SERVICES } from "@/constants";
 
 const ServicesOverview: React.FC = () => {
   // Map icon strings to actual icon components
@@ -58,8 +57,9 @@ const ServicesOverview: React.FC = () => {
             Comprehensive Finance Solutions
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            From first home purchases to complex investment strategies, I provide tailored finance solutions 
-            that match your goals and circumstances.
+            From first home purchases to complex investment strategies, I
+            provide tailored finance solutions that match your goals and
+            circumstances.
           </p>
         </motion.div>
 
@@ -72,7 +72,7 @@ const ServicesOverview: React.FC = () => {
         >
           {SERVICES.map((service) => {
             const IconComponent = iconMap[service.icon as keyof typeof iconMap];
-            
+
             return (
               <motion.div
                 key={service.id}
@@ -90,22 +90,25 @@ const ServicesOverview: React.FC = () => {
                     </h3>
                   </div>
                 </div>
-                
+
                 {/* Service Description */}
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   {service.description}
                 </p>
-                
+
                 {/* Service Features */}
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-600">
+                    <li
+                      key={idx}
+                      className="flex items-center text-sm text-gray-600"
+                    >
                       <div className="w-2 h-2 bg-secondary-500 rounded-full mr-3 flex-shrink-0"></div>
                       <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
-                
+
                 {/* CTA Link */}
                 {/*
                 <Link
@@ -133,7 +136,8 @@ const ServicesOverview: React.FC = () => {
               Not sure which option is right for you?
             </h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Every situation is unique. Let's discuss your specific needs and find the perfect financing solution together.
+              Every situation is unique. Let's discuss your specific needs and
+              find the perfect financing solution together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -159,4 +163,4 @@ const ServicesOverview: React.FC = () => {
   );
 };
 
-export default ServicesOverview; 
+export default ServicesOverview;

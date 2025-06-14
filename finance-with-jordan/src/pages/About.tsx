@@ -1,32 +1,31 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Phone, Mail, Award, Users, Clock, DollarSign } from 'lucide-react';
-import Button from '@/components/ui/Button';
-import { CONTACT_INFO } from '@/constants';
-import jordanImage from '@/assets/jordan-professional.jpeg';
+import React from "react";
+import { motion } from "framer-motion";
+import { Phone, Mail, Award, Users, Clock, DollarSign } from "lucide-react";
+import { CONTACT_INFO } from "@/constants";
+import jordanImage from "@/assets/jordan-professional.jpeg";
 
 const About: React.FC = () => {
   const achievements = [
     {
       icon: Award,
-      label: 'MFAA Certified',
-      value: '10+ Years'
+      label: "MFAA Certified",
+      value: "10+ Years",
     },
     {
       icon: Users,
-      label: 'Happy Clients',
-      value: '500+'
+      label: "Happy Clients",
+      value: "500+",
     },
     {
       icon: Clock,
-      label: 'Average Response Time',
-      value: '< 4 Hours'
+      label: "Average Response Time",
+      value: "< 4 Hours",
     },
     {
       icon: DollarSign,
-      label: 'Loans Settled',
-      value: '$50M+'
-    }
+      label: "Loans Settled",
+      value: "$50M+",
+    },
   ];
 
   return (
@@ -64,14 +63,23 @@ const About: React.FC = () => {
                 Your Trusted Finance Partner
               </h1>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                With over a decade of experience in mortgage broking, I've helped hundreds of clients achieve their property dreams. My approach combines deep industry knowledge with personalized service, ensuring you get the best possible outcome for your unique situation.
+                With over a decade of experience in mortgage broking, I've
+                helped hundreds of clients achieve their property dreams. My
+                approach combines deep industry knowledge with personalized
+                service, ensuring you get the best possible outcome for your
+                unique situation.
               </p>
               <div className="space-y-4 mb-8">
                 <p className="text-gray-600 leading-relaxed">
-                  I specialize in helping first-time homebuyers navigate the complex world of property finance, assisting property investors in building their portfolios, and finding the best refinancing solutions to save my clients money.
+                  I specialize in helping first-time homebuyers navigate the
+                  complex world of property finance, assisting property
+                  investors in building their portfolios, and finding the best
+                  refinancing solutions to save my clients money.
                 </p>
                 <p className="text-gray-600 leading-relaxed">
-                  My commitment is to make the loan process as smooth and stress-free as possible, while securing the most competitive rates and terms for your circumstances.
+                  My commitment is to make the loan process as smooth and
+                  stress-free as possible, while securing the most competitive
+                  rates and terms for your circumstances.
                 </p>
               </div>
               <div className="flex flex-wrap gap-4">
@@ -107,16 +115,14 @@ const About: React.FC = () => {
           >
             {achievements.map((achievement, index) => (
               <div
-                key={achievement.label}
+                key={index}
                 className="text-center p-6 bg-white rounded-xl shadow-sm"
               >
                 <achievement.icon className="w-8 h-8 text-primary-600 mx-auto mb-4" />
                 <div className="text-2xl font-bold text-gray-900 mb-2">
                   {achievement.value}
                 </div>
-                <div className="text-sm text-gray-600">
-                  {achievement.label}
-                </div>
+                <div className="text-sm text-gray-600">{achievement.label}</div>
               </div>
             ))}
           </motion.div>
@@ -136,7 +142,9 @@ const About: React.FC = () => {
               Ready to Start Your Property Journey?
             </h2>
             <p className="text-primary-100 text-lg mb-8 max-w-2xl mx-auto">
-              Let's discuss your goals and find the perfect financing solution for your needs. The first consultation is completely free, with no obligations.
+              Let's discuss your goals and find the perfect financing solution
+              for your needs. The first consultation is completely free, with no
+              obligations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -162,4 +170,4 @@ const About: React.FC = () => {
   );
 };
 
-export default About; 
+export default About;
