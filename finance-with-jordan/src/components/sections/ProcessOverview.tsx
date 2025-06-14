@@ -40,10 +40,10 @@ const ProcessOverview: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-8"
         >
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 sm:mb-4">
+          <h2 className="text-2xl sm:text-xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 sm:mb-4">
             Our Process
           </h2>
-          <p className="text-sm sm:text-base md:text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-md sm:text-base md:text-xl text-gray-600 max-w-3xl mx-auto">
             A straightforward approach to getting you the best possible outcome
           </p>
         </motion.div>
