@@ -12,7 +12,7 @@ const HeroSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative bg-gradient-to-r from-primary-50 to-primary-100 py-20 overflow-hidden">
+    <section className="relative bg-gradient-to-r from-primary-50 to-primary-100 py-12 sm:py-20 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -21,25 +21,25 @@ const HeroSection: React.FC = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
               Making Home Finance
               <span className="text-primary-600 block">Simple & Stress-Free</span>
             </h1>
             
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+            <p className="text-base sm:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed">
               Navigate your home finance journey with confidence. As your trusted mortgage broker, 
               I'll guide you through every step, from first consultation to settlement.
             </p>
             
             {/* Trust Indicators */}
-            <div className="flex flex-wrap gap-4 mb-8">
+            <div className="flex flex-wrap gap-2 sm:gap-4 mb-6 sm:mb-8">
               {trustIndicators.map((indicator, index) => {
                 const IconComponent = indicator.icon;
                 return (
@@ -65,18 +65,18 @@ const HeroSection: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full"
             >
               <a
                 href="https://calendly.com/jordansoo08?fbclid=PAQ0xDSwK4w3FleHRuA2FlbQIxMQABpwv9jRGVBaT4VfSy9hhkvm02Ow7W_PVBp4MzllXOqbRM3XfTzTXUJN9EdJEW_aem_QUOkfkY3Mnqm5EQZLsz70g"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white font-medium rounded-md hover:bg-primary-700 transition-colors"
+                className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 bg-primary-600 text-white font-medium rounded-md hover:bg-primary-700 transition-colors"
               >
                 Get Your Free Consultation
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
-              <Button variant="outline" size="lg" icon={Calculator} to="/resources/calculator">
+              <Button variant="outline" size="lg" icon={Calculator} to="/resources/calculator" className="w-full sm:w-auto">
                 Calculate Your Borrowing Power
               </Button>
             </motion.div>
@@ -86,7 +86,7 @@ const HeroSection: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="text-sm text-gray-500 mt-6"
+              className="text-xs sm:text-sm text-gray-500 mt-4 sm:mt-6"
             >
               ✓ No obligation consultation &nbsp;&nbsp; ✓ Compare 40+ lenders &nbsp;&nbsp; ✓ Expert knowledge
             </motion.p>
@@ -97,15 +97,15 @@ const HeroSection: React.FC = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
+            className="relative mt-10 lg:mt-0"
           >
             <div className="relative">
               {/* Main Image Container */}
-              <div className="aspect-square bg-gradient-to-br from-primary-100 to-primary-200 rounded-2xl flex items-center justify-center relative overflow-hidden">
+              <div className="aspect-square bg-gradient-to-br from-primary-100 to-primary-200 rounded-2xl flex items-center justify-center relative overflow-hidden w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-full lg:h-full mx-auto">
                 <img
                   src={jordanPhoto}
                   alt="Jordan - Mortgage Broker"
-                  className="w-3/4 h-3/4 object-cover rounded-xl shadow-2xl"
+                  className="w-full h-full object-cover rounded-xl shadow-2xl"
                 />
               </div>
 
@@ -124,10 +124,10 @@ const HeroSection: React.FC = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 1.2 }}
-                className="absolute -top-6 -right-6 bg-white p-6 rounded-xl shadow-medium"
+                className="absolute -top-4 -right-4 sm:-top-6 sm:-right-6 bg-white p-4 sm:p-6 rounded-xl shadow-medium"
               >
-                <div className="text-3xl font-bold text-secondary-600">4.8★</div>
-                <div className="text-sm text-gray-600">Client Rating</div>
+                <div className="text-xl sm:text-3xl font-bold text-secondary-600">4.8★</div>
+                <div className="text-xs sm:text-sm text-gray-600">Client Rating</div>
               </motion.div>
             </div>
           </motion.div>
