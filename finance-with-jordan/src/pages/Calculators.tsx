@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Calculator, DollarSign, Home, TrendingUp, FileText, ArrowRight } from 'lucide-react';
+import { Calculator, DollarSign, FileText, ArrowRight } from 'lucide-react';
 
 const Calculators: React.FC = () => {
   const [activeCalculator, setActiveCalculator] = useState('loan-repayment');
