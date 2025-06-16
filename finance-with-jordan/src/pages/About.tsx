@@ -155,13 +155,13 @@ const About: React.FC = () => {
               >
                 Book Free Consultation
               </a>
-              <a
+              {/* <a
                 href={`mailto:${CONTACT_INFO.email}`}
                 className="inline-flex items-center justify-center px-4 py-2.5 sm:px-6 sm:py-3 border-2 border-white text-sm sm:text-base font-medium rounded-md text-white hover:bg-white hover:text-primary-600 transition-colors"
               >
                 <Mail className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                 Send Email
-              </a>
+              </a> */}
             </div>
           </motion.div>
         </div>

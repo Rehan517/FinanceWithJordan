@@ -1,11 +1,10 @@
 import { Service, Testimonial, NavigationItem, TrustIndicator, FAQItem } from '@/types';
 
 export const CONTACT_INFO = {
-  phone: '+61 400 000 000',
-  email: 'jordan@financewithjardan.com.au',
-  address: 'Perth, Western Australia',
-  businessHours: 'Mon-Fri: 9AM-6PM, Sat: 9AM-2PM',
-  emergencyContact: '+61 400 000 000',
+  phone: '+61 481 321 988',
+  email: 'jordansoofinance@gmail.com',
+  address: 'Wherever you are, Premium Service Follows',
+  emergencyContact: '+61 481 321 988',
 };
 
 export const NAVIGATION_ITEMS: NavigationItem[] = [

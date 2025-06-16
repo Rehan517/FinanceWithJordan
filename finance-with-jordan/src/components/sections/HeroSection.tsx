@@ -76,8 +76,8 @@ const HeroSection: React.FC = () => {
                 Get Your Free Consultation
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
-              <Button variant="outline" size="lg" icon={Calculator} to="/resources/calculator" className="w-full sm:w-auto">
-                Calculate Your Borrowing Power
+              <Button variant="outline" size="lg" icon={Calculator} to="/calculators" className="w-full sm:w-auto">
+                Mortgage Calculators
               </Button>
             </motion.div>
 
