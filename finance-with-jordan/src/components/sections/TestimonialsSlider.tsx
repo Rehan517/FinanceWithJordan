@@ -54,71 +54,81 @@ const TestimonialsSlider: React.FC = () => {
   const [width, setWidth] = useState(0);
 
   useEffect(() => {
-    // Calculate the width of a single set of testimonials
-    const singleSetWidth = BASE_TESTIMONIALS.length * (400 + 24); // card width (400px) + gap (24px)
-    setWidth(singleSetWidth);
+    // Calculate the width of a single set of testimonials based on screen size
+    const updateWidth = () => {
+      const isMobile = window.innerWidth < 640;
+      const cardWidth = isMobile ? 280 : 400; // Smaller cards on mobile
+      const gap = isMobile ? 16 : 24; // Smaller gap on mobile
+      const singleSetWidth = BASE_TESTIMONIALS.length * (cardWidth + gap);
+      setWidth(singleSetWidth);
+    };
+
+    updateWidth();
+    window.addEventListener('resize', updateWidth);
 
     // Start the animation
     controls.start({
-      x: -singleSetWidth,
+      x: -width,
       transition: {
         duration: 30,
         ease: "linear",
         repeat: Infinity,
       }
     });
-  }, [controls]);
+
+    return () => window.removeEventListener('resize', updateWidth);
+  }, [controls, width]);
 
   return (
-    <section className="py-20 bg-white overflow-hidden">
+    <section className="py-12 sm:py-16 md:py-20 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-6 sm:mb-8 md:mb-10"
         >
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 sm:mb-4">
             Word On The Street
           </h2>
-          <div className="w-32 h-1 bg-primary-200 mx-auto"></div>
+          <div className="w-24 sm:w-32 h-1 bg-primary-200 mx-auto"></div>
         </motion.div>
 
         {/* Testimonials Slider */}
         <div className="relative">
           <motion.div
             animate={controls}
-            className="flex gap-6"
+            className="flex gap-4 sm:gap-6"
             style={{ width: `${width * 3}px` }} // Triple the width for three sets
           >
             {TESTIMONIALS.map((testimonial, index) => (
               <div
                 key={`${testimonial.id}-${index}`}
-                className="w-[400px] flex-shrink-0 bg-gray-50 rounded-xl p-6 shadow-sm"
+                className="w-[280px] sm:w-[400px] flex-shrink-0 bg-gray-50 rounded-xl p-4 sm:p-6 shadow-sm"
               >
-                <div className="flex items-center gap-4 mb-4">
+                <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
                   {/* Avatar */}
                   {typeof testimonial.avatar === 'string' && testimonial.avatar.startsWith('/') ? (
                     <img
                       src={testimonial.avatar}
                       alt={testimonial.name}
-                      className="w-12 h-12 rounded-full object-cover"
+                      className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
                     />
                   ) : (
-                    <div className="w-12 h-12 rounded-full bg-primary-600 text-white flex items-center justify-center text-xl font-semibold">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary-600 text-white flex items-center justify-center text-lg sm:text-xl font-semibold">
                       {testimonial.avatar}
                     </div>
                   )}
                   
                   {/* Name and Rating */}
                   <div>
-                    <h3 className="font-semibold text-gray-900">{testimonial.name}</h3>
+                    <h3 className="text-sm sm:text-base font-semibold text-gray-900">{testimonial.name}</h3>
                     <div className="flex gap-1">
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <Star
                           key={i}
-                          className="w-4 h-4 fill-primary-500 text-primary-500"
+                          className="w-3 h-3 sm:w-4 sm:h-4 fill-primary-500 text-primary-500"
                         />
                       ))}
                     </div>
@@ -126,19 +136,19 @@ const TestimonialsSlider: React.FC = () => {
                 </div>
 
                 {/* Review Text */}
-                <p className="text-gray-600 mb-4 line-clamp-4">{testimonial.text}</p>
+                <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4 line-clamp-4 leading-relaxed">{testimonial.text}</p>
 
                 {/* Optional Image */}
                 {testimonial.image && (
                   <img
                     src={testimonial.image}
                     alt={`${testimonial.name}'s success story`}
-                    className="w-full h-48 object-cover rounded-lg mb-4"
+                    className="w-full h-36 sm:h-48 object-cover rounded-lg mb-3 sm:mb-4"
                   />
                 )}
 
                 {/* Date */}
-                <p className="text-sm text-gray-500">{testimonial.date}</p>
+                <p className="text-xs sm:text-sm text-gray-500">{testimonial.date}</p>
               </div>
             ))}
           </motion.div>

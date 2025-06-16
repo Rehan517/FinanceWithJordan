@@ -39,7 +39,7 @@ const HeroSection: React.FC = () => {
             </p>
             
             {/* Trust Indicators */}
-            <div className="flex flex-wrap gap-1 sm:gap-3 mb-6 sm:mb-8 justify-start">
+            <div className="flex flex-wrap gap-1 sm:gap-2 mb-4 sm:mb-6 justify-between">
               {trustIndicators.map((indicator, index) => {
                 const IconComponent = indicator.icon;
                 return (
@@ -48,12 +48,12 @@ const HeroSection: React.FC = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                    className="flex items-center bg-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-soft min-w-[120px] sm:min-w-[140px] text-left"
+                    className="flex items-center bg-white px-2 py-1 sm:px-3 sm:py-1.5 rounded-full shadow-soft min-w-[80px] sm:min-w-[100px] text-left"
                   >
-                    <IconComponent className="h-4 w-4 sm:h-5 sm:w-5 text-secondary-600 mr-2" />
+                    <IconComponent className="h-3 w-3 sm:h-4 sm:w-4 text-secondary-600 mr-1 sm:mr-2" />
                     <div className="text-left">
-                      <span className="text-xs sm:text-sm font-medium text-gray-900">{indicator.subtext}</span>
-                      <p className="text-xs sm:text-sm text-gray-600 leading-tight whitespace-normal">{indicator.text}</p>
+                      <span className="text-[10px] sm:text-xs font-medium text-gray-900">{indicator.subtext}</span>
+                      <p className="text-[9px] sm:text-[10px] text-gray-600 leading-tight whitespace-normal">{indicator.text}</p>
                     </div>
                   </motion.div>
                 );
