@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Shield, Award } from 'lucide-react';
+import { Phone, Mail, MapPin, Shield, Award } from 'lucide-react';
 import { CONTACT_INFO } from '@/constants';
 
 const Footer: React.FC = () => {

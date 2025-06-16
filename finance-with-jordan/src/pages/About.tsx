@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Phone, Mail, Award, Users, Clock, DollarSign } from "lucide-react";
+import { Phone, Award, Users, Clock, DollarSign } from "lucide-react";
 import { CONTACT_INFO } from "@/constants";
 import jordanImage from "@/assets/jordan-professional.jpeg";
 
