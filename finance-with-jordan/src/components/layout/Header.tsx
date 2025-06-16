@@ -14,7 +14,7 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="text-2xl font-bold text-primary-900 hover:text-primary-700 transition-colors">
+            <Link to="/" className="text-xl font-bold text-primary-900 hover:text-primary-700 transition-colors">
               Finance With Jordan
             </Link>
           </div>

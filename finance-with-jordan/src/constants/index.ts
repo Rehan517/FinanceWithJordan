@@ -11,6 +11,7 @@ export const CONTACT_INFO = {
 export const NAVIGATION_ITEMS: NavigationItem[] = [
   { name: 'About Jordan', href: '/about' },
   { name: 'Services', href: '/services' },
+  { name: 'Calculators', href: '/calculators' },
   { name: 'Contact', href: '/contact' },
 ];
 

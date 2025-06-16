@@ -80,7 +80,7 @@ const TestimonialsSlider: React.FC = () => {
   }, [controls, width]);
 
   return (
-    <section className="py-12 sm:py-16 md:py-20 bg-white overflow-hidden">
+    <section className="pt-12 pb-20 sm:py-16 md:py-20 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
