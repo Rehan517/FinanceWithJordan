@@ -5,45 +5,43 @@ import { Star } from 'lucide-react';
 const BASE_TESTIMONIALS = [
   {
     id: 1,
-    name: 'Sarah Sullivan',
+    name: 'Dilan N',
     avatar: 'S',
     rating: 5,
-    text: 'Kobe assisted us with refinancing our mortgage and we could not recommend her services more! She is knowledgeable, efficient and obtained the best possible outcome for us while making sure we understood everything along the way!',
-    date: 'Dec 3, 2024'
+    text: 'Jordan assisted me with my car finance and I couldn\'t be happier with the service I received. He was able to get me a great rate and was able to get me into a car that I love. I would highly recommend him to anyone looking for a car finance.',
+    date: 'May 3, 2025'
   },
   {
     id: 2,
-    name: 'Hayley G',
-    avatar: '/avatars/hayley.jpg',
+    name: 'James S',
+    avatar: 'J',
     rating: 5,
-    text: '5 STARS simply isn\'t enough for Kobe. I couldn\'t recommend her enough if you\'re looking for someone who genuinely cares about getting you the best outcome possible.',
-    date: 'Oct 28, 2024',
-    image: '/testimonials/hayley-home.jpg'
+    text: 'Jordan was professional and helpful. He guided me throughout the entire process and was able to get me into my first home!',
+    date: 'April 24, 2025',
+    
   },
   {
     id: 3,
-    name: 'Jaedin Muliaga',
-    avatar: '/avatars/jaedin.jpg',
+    name: 'Rehan A',
+    avatar: 'R',
     rating: 5,
-    text: 'Kobe has been such a pleasure to work with our so called co-parent guiding us down our financial journey into our first property. A relatable and natural interaction on a daily basis makes a first home buyer with Kobe\'s guidance so much easier.',
-    date: 'Oct 21, 2024'
+    text: 'Jordan was able to help me and my business partner secure a business loan for our clothing business. We didnt even know that this was an option for us. He made the process simple and efficient,allowing us to get the funds in a couple of days from our initial meeting. ',
+    date: 'March 4, 2025'
   },
   {
     id: 4,
-    name: 'Esha',
+    name: 'Emma S',
     avatar: 'E',
     rating: 5,
-    text: 'I highly recommend Kobe who is a dedicated, warm and knowledgeable mortgage broker who is 100% committed to her clients. As a fellow mortgage broker I\'ve seen how hard working and genuine Kobe is and I highly recommend her outstanding services. You will be in great hands!',
-    date: 'Sep 24, 2024'
+    text: 'When I first contacted Jordan, I was a bit nervous as I wasnt sure if I was ready to buy a property. I did not know what type of property I was looking for, either investment or a place to live in. Jordan went through the list of pros and cons of each and helped me make a decision on what was best for me. He was always available to answer my questions and went above and beyond to get me the best deal possible.'
   },
   {
     id: 5,
-    name: 'Kyle',
-    avatar: '/avatars/kyle.jpg',
+    name: 'Jacqueline M',
+    avatar: 'J',
     rating: 5,
-    text: 'KOBE IS THE BEST! She helped me secure my first home loan and made the process so easy. She was always available to answer my questions and went above and beyond to get me the best deal possible.',
-    date: 'Sep 11, 2024',
-    image: '/testimonials/kyle-home.jpg'
+    text: ' Jordan made my investment property purchase so easy. From the initial meeting, you could tell he loved what he does and was on the ball. He made me more excited about the purchase and guided me through the entire process. I was once told that, to build a good property portfolio, you need a good team by your side, well its safe to say that Jordan will always be part of my property team.',
+    date: 'February 12, 2025'
   }
 ];
 
@@ -57,7 +55,7 @@ const TestimonialsSlider: React.FC = () => {
     // Calculate the width of a single set of testimonials based on screen size
     const updateWidth = () => {
       const isMobile = window.innerWidth < 640;
-      const cardWidth = isMobile ? 280 : 400; // Smaller cards on mobile
+      const cardWidth = isMobile ? 320 : 480; // Increased card width for better text fit
       const gap = isMobile ? 16 : 24; // Smaller gap on mobile
       const singleSetWidth = BASE_TESTIMONIALS.length * (cardWidth + gap);
       setWidth(singleSetWidth);
@@ -105,7 +103,7 @@ const TestimonialsSlider: React.FC = () => {
             {TESTIMONIALS.map((testimonial, index) => (
               <div
                 key={`${testimonial.id}-${index}`}
-                className="w-[280px] sm:w-[400px] flex-shrink-0 bg-gray-50 rounded-xl p-4 sm:p-6 shadow-sm"
+                className="w-[320px] sm:w-[480px] flex-shrink-0 bg-gray-50 rounded-xl p-4 sm:p-6 shadow-sm"
               >
                 <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
                   {/* Avatar */}
@@ -136,16 +134,7 @@ const TestimonialsSlider: React.FC = () => {
                 </div>
 
                 {/* Review Text */}
-                <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4 line-clamp-4 leading-relaxed">{testimonial.text}</p>
-
-                {/* Optional Image */}
-                {testimonial.image && (
-                  <img
-                    src={testimonial.image}
-                    alt={`${testimonial.name}'s success story`}
-                    className="w-full h-36 sm:h-48 object-cover rounded-lg mb-3 sm:mb-4"
-                  />
-                )}
+                <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4 leading-relaxed">{testimonial.text}</p>
 
                 {/* Date */}
                 <p className="text-xs sm:text-sm text-gray-500">{testimonial.date}</p>

@@ -8,24 +8,22 @@ const About: React.FC = () => {
   const achievements = [
     {
       icon: Award,
-      label: "MFAA Certified",
-      value: "10+ Years",
+      label: "Integrity",
+      value: "FBAA Certified",
+      description: "Our ethical lending philosophy means we only get paid by lenders post-settlement – never by third parties like real estate agencies."
     },
     {
       icon: Users,
-      label: "Happy Clients",
-      value: "500+",
+      label: "Honesty",
+      value: "50+ Happy Clients",
+      description: "We believe in radical transparency: being open about our internal processes, how we're compensated, and who we have commercial relationships with."
     },
     {
       icon: Clock,
-      label: "Average Response Time",
-      value: "< 4 Hours",
-    },
-    {
-      icon: DollarSign,
-      label: "Loans Settled",
-      value: "$50M+",
-    },
+      label: "Client-Centrism",
+      value: "< 2 Hours Response",
+      description: "We always act in our clients' best interests – even if financial incentives point the other way."
+    }
   ];
 
   return (
@@ -39,18 +37,15 @@ const About: React.FC = () => {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="relative max-w-xs sm:max-w-md mx-auto lg:max-w-lg"
+              className="relative max-w-[200px] sm:max-w-[240px] mx-auto lg:max-w-[280px] xl:max-w-[320px]"
             >
-              <div className="aspect-[1/1] rounded-xl sm:rounded-2xl overflow-hidden bg-gray-100">
+              <div className="aspect-[1/1] rounded-full overflow-hidden bg-gray-100">
                 <img
                   src={jordanImage}
                   alt="Jordan - Finance Expert"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover rounded-full"
                 />
               </div>
-              {/* Decorative Elements */}
-              <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 w-24 h-24 sm:w-32 sm:h-32 bg-primary-100 rounded-full -z-10"></div>
-              <div className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 w-18 h-18 sm:w-24 sm:h-24 bg-secondary-100 rounded-full -z-10"></div>
             </motion.div>
 
             {/* Content Column */}
@@ -63,24 +58,20 @@ const About: React.FC = () => {
                 Your Trusted Finance Partner
               </h1>
               <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-6 sm:mb-8 leading-relaxed">
-                With over a decade of experience in mortgage broking, I've
-                helped hundreds of clients achieve their property dreams. My
-                approach combines deep industry knowledge with personalized
-                service, ensuring you get the best possible outcome for your
-                unique situation.
+              My passion for property began when my parents encouraged me to invest in property instead of buying a car I had saved for. 
+              This led me to dive deep into property research, and my path became clear after speaking with a successful mortgage broker who guided me step-by-step through the process. 
+              His insights opened my eyes to the power of property, and I knew I wanted to help others achieve the same success.
               </p>
               <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                 <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                  I specialize in helping first-time homebuyers navigate the
-                  complex world of property finance, assisting property
-                  investors in building their portfolios, and finding the best
-                  refinancing solutions to save my clients money.
+                Inspired by that experience, I made the decision to leave my aviation course and pursue a career in property. 
+                I obtained the necessary certifications to become a qualified mortgage broker, 
+                with the goal of helping people like myself navigate the property journey and build successful portfolios.
                 </p>
-                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                  My commitment is to make the loan process as smooth and
-                  stress-free as possible, while securing the most competitive
-                  rates and terms for your circumstances.
-                </p>
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                  My mission is simple: to assist as many people as I can in reaching their property goals, whether it’s financial freedom or building a business. I’m committed to offering the same support and guidance that was offered to me, helping you create the life you desire through smart property investments.
+                  </p>
+                  
               </div>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <a
@@ -105,24 +96,36 @@ const About: React.FC = () => {
       </section>
 
       {/* Achievements Section */}
-      <section className="py-12 sm:py-16 bg-gray-50">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"
+            className="text-center mb-8 sm:mb-12"
+          >
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              Our Commitments to You
+            </h2>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8"
           >
             {achievements.map((achievement, index) => (
               <div
                 key={index}
-                className="text-center p-4 sm:p-6 bg-white rounded-lg sm:rounded-xl shadow-sm"
+                className="text-center p-6 sm:p-8 bg-gray-50 border border-gray-200 rounded-xl hover:border-primary-500 transition-colors duration-300"
               >
-                <achievement.icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary-600 mx-auto mb-2 sm:mb-4" />
-                <div className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-1 sm:mb-2">
-                  {achievement.value}
-                </div>
-                <div className="text-xs sm:text-sm text-gray-600">{achievement.label}</div>
+                <achievement.icon className="w-12 h-12 sm:w-16 sm:h-16 text-primary-600 mx-auto mb-4 sm:mb-6" />
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">
+                  {achievement.label}
+                </h3>
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                  {achievement.description}
+                </p>
               </div>
             ))}
           </motion.div>

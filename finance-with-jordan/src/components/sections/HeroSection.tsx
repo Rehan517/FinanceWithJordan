@@ -7,8 +7,8 @@ import jordanPhoto from '@/assets/jordan-professional.jpeg';
 const HeroSection: React.FC = () => {
   const trustIndicators = [
     { icon: Shield, text: 'FBAA Member', subtext: 'Certified' },
-    { icon: Users, text: 'Happy Clients', subtext: '100+' },
-    { icon: Clock, text: 'Pre-Approval', subtext: '7 Days' },
+    { icon: Users, text: 'Happy Clients', subtext: '50+' },
+    { icon: Clock, text: 'Response Time', subtext: '2 Hours' },
   ];
 
   return (
@@ -101,11 +101,11 @@ const HeroSection: React.FC = () => {
           >
             <div className="relative">
               {/* Main Image Container */}
-              <div className="aspect-square bg-gradient-to-br from-primary-100 to-primary-200 rounded-2xl flex items-center justify-center relative overflow-hidden w-72 h-72 sm:w-[26rem] sm:h-[26rem] md:w-[30rem] md:h-[30rem] lg:w-full lg:h-full mx-auto">
+              <div className="aspect-square bg-gradient-to-br from-primary-100 to-primary-200 rounded-full flex items-center justify-center relative overflow-hidden w-72 h-72 sm:w-[26rem] sm:h-[26rem] md:w-[28rem] md:h-[28rem] lg:w-80 lg:h-80 xl:w-96 xl:h-96 mx-auto">
                 <img
                   src={jordanPhoto}
                   alt="Jordan - Mortgage Broker"
-                  className="w-full h-full object-cover rounded-xl shadow-2xl"
+                  className="w-full h-full object-cover rounded-full shadow-2xl"
                 />
               </div>
 

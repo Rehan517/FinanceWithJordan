@@ -1,7 +1,7 @@
 import { Service, Testimonial, NavigationItem, TrustIndicator, FAQItem } from '@/types';
 
 export const CONTACT_INFO = {
-  phone: '+61 481 321 988',
+  phone: '+61 440 120 888',
   email: 'jordansoofinance@gmail.com',
   address: 'Wherever you are, Premium Service Follows',
   emergencyContact: '+61 481 321 988',
@@ -10,7 +10,7 @@ export const CONTACT_INFO = {
 export const NAVIGATION_ITEMS: NavigationItem[] = [
   { name: 'About Jordan', href: '/about' },
   { name: 'Services', href: '/services' },
-  { name: 'Calculators', href: '/calculators' },
+  { name: 'Resources', href: '/calculators' },
   { name: 'Contact', href: '/contact' },
 ];
 
@@ -20,7 +20,7 @@ export const SERVICES: Service[] = [
     title: 'First Home Buyer Loans',
     description: 'Navigate your first home purchase with expert guidance and access to exclusive first home buyer benefits.',
     icon: 'Home',
-    features: ['First Home Owner Grants', 'Low Deposit Options', 'Keystart Loans', 'Government Schemes'],
+    features: ['Government Schemes', 'Low Deposit Options', 'Simplified Process'],
     ctaText: 'Get First Home Buyer Guide',
     ctaLink: '/services/first-home-buyer',
     category: 'residential'
@@ -30,7 +30,7 @@ export const SERVICES: Service[] = [
     title: 'Investment Property Finance',
     description: 'Build your property portfolio with strategic financing solutions and tax-effective structures.',
     icon: 'TrendingUp',
-    features: ['Portfolio Lending', 'SMSF Loans', 'Tax Benefits', 'Negative Gearing'],
+    features: ['Investment Portfolio Strategies', 'Portfolio Building', 'SMSF Investment Lending'],
     ctaText: 'Investment Strategy Consult',
     ctaLink: '/services/investment-property',
     category: 'investment'
@@ -40,7 +40,7 @@ export const SERVICES: Service[] = [
     title: 'Refinancing & Restructuring',
     description: 'Save thousands by switching to a better rate or accessing equity for your next investment.',
     icon: 'RefreshCw',
-    features: ['Rate Comparisons', 'Equity Access', 'Debt Consolidation', 'Cash Out Options'],
+    features: ['Rate Comparisons', 'Equity Access', 'Debt Consolidation'],
     ctaText: 'Calculate Savings',
     ctaLink: '/services/refinancing',
     category: 'refinance'
@@ -50,7 +50,7 @@ export const SERVICES: Service[] = [
     title: 'Commercial Finance',
     description: 'Secure funding for your business premises, equipment, or commercial investment properties.',
     icon: 'Building',
-    features: ['Business Loans', 'Equipment Finance', 'Commercial Property', 'Development Finance'],
+    features: ['Business Loans', 'Equipment Finance', 'Commercial Property', 'Construction Finance'],
     ctaText: 'Business Finance Quote',
     ctaLink: '/services/commercial',
     category: 'commercial'
@@ -70,7 +70,7 @@ export const SERVICES: Service[] = [
     title: 'SMSF Lending',
     description: 'Leverage your superannuation to build wealth through property investment with SMSF loans.',
     icon: 'PiggyBank',
-    features: ['SMSF Setup', 'Property Investment', 'Compliance Support', 'Trustee Advice'],
+    features: ['SMSF Investing', 'Compliance Support', 'Trusted Advice'],
     ctaText: 'SMSF Strategy Session',
     ctaLink: '/services/smsf',
     category: 'super'

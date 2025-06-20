@@ -7,25 +7,25 @@ const PROCESS_STEPS = [
     id: 1,
     title: 'Initial Call',
     summary: 'Book a call to discuss your property goals with an expert.',
-    description: 'Once you\'ve filled out one of the "Purchase" or "Refinance" forms above we will book a call to discuss what your goals are with property. This will be with an Investment Savvy Mortgage broker who will set up the Game Plan!'
+    description: 'Fill out the contact form or schedule a free consultation to discuss what your goals are with property. This will be with an initial discussion so i can understand your goals and what you are looking for.'
   },
   {
     id: 2,
     title: 'Lodgement',
     summary: 'We collect your documents and find the best lender for you.',
-    description: 'After our initial call we will request the required documents from you and get to work finding the best lender to suit your goals. From there it\'s up to us, we will lodge your deal & hammer the banks to get it done.'
+    description: 'After our initial call we will request the required documents from you and get to work finding the best lender to suit your goals. From there it\'s up to us, we will lodge your deal and get you the best possible outcome for your goals.'
   },
   {
     id: 3,
     title: 'Approval',
     summary: 'We guide you through the next steps after approval.',
-    description: 'Once approved we will outline the next steps of what you need to do, whether it\'s a purchase or a refinance the team will be there walking you through each step of the process to settlement.'
+    description: 'Once approved we will outline the next steps of what you need to do, whether it\'s a purchase or a refinance, I will be there walking you through each step of the process to settlement.'
   },
   {
     id: 4,
     title: 'Post-Settlement',
     summary: 'We help set up your accounts and review your rates regularly.',
-    description: 'Once the Property settles we will help ensure all of your offsets & accounts are setup correctly. The job isn\'t finished there, every 6 - 12 months we will be completing rate reviews on your loans to ensure you are on the most competitive rate possible.'
+    description: 'Once the Property settles we will help ensure all of your accounts are setup correctly. The job isn\'t finished there, every 6 - 12 months we will be completing rate reviews on your loans to ensure you are on the most competitive rate possible. I will also be regularly checking in with you to ensure you are happy with the service and to answer any questions you may have.'
   }
 ];
 

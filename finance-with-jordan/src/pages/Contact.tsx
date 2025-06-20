@@ -4,6 +4,7 @@ const Contact: React.FC = () => {
   const [form, setForm] = useState({
     name: '',
     email: '',
+    phone: '',
     message: '',
     consultation: false,
   });
@@ -65,6 +66,19 @@ const Contact: React.FC = () => {
               onChange={handleChange}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500 text-sm"
               placeholder="you@email.com"
+            />
+          </div>
+          <div>
+            <label htmlFor="phone" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              value={form.phone}
+              onChange={handleChange}
+              autoComplete="off"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500 text-sm"
+              placeholder="+61 4XX XXX XXX"
             />
           </div>
           <div>

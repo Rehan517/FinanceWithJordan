@@ -12,10 +12,11 @@ const Footer: React.FC = () => {
     { name: 'Refinancing', href: '/services/refinancing' },
     { name: 'Commercial Finance', href: '/services/commercial' },
     { name: 'SMSF Lending', href: '/services/smsf' },
+    { name: 'Personal & Asset Finance', href: '/services/smsf' },
   ];
 
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-gray-900 text-gray-300"> 
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
@@ -23,7 +24,7 @@ const Footer: React.FC = () => {
           <div className="space-y-3 sm:space-y-4">
             <h3 className="text-xl sm:text-2xl font-bold text-white">Finance With Jordan</h3>
             <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
-              Your trusted mortgage broker helping Australians achieve their property and financial goals with expert guidance and personalized service.
+              Your trusted mortgage broker helping Australians achieve their property and financial goals with expert guidance and personalised service.
             </p>
             
             {/* Credentials */}
@@ -117,7 +118,7 @@ const Footer: React.FC = () => {
               <p>&copy; {currentYear} Finance With Jordan. All rights reserved.</p>
             </div>
             
-            <div className="flex flex-wrap justify-center md:justify-end space-x-4 sm:space-x-6 text-xs sm:text-sm">
+            {/* <div className="flex flex-wrap justify-center md:justify-end space-x-4 sm:space-x-6 text-xs sm:text-sm">
               <Link to="/privacy" className="hover:text-white transition-colors">
                 Privacy Policy
               </Link>
@@ -127,14 +128,13 @@ const Footer: React.FC = () => {
               <Link to="/disclaimer" className="hover:text-white transition-colors">
                 Disclaimer
               </Link>
-            </div>
+            </div> */}
           </div>
 
           {/* Legal Disclaimer */}
           <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-gray-800">
             <p className="text-[10px] sm:text-xs text-gray-500 leading-relaxed">
-              Jordan is a Credit Representative (Credit Representative Number: [NUMBER]) of [LICENSEE NAME] 
-              Australian Credit Licence [NUMBER]. This website contains general information only and does not 
+              A Credit Representative (CRN 567645) under BLSSA PTY LTD Australian Credit Licence 391237. This website contains general information only and does not 
               constitute financial advice. You should consider seeking independent financial advice before 
               making any financial decisions.
             </p>
