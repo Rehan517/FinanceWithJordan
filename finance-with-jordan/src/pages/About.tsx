@@ -37,9 +37,9 @@ const About: React.FC = () => {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="relative max-w-[200px] sm:max-w-[240px] mx-auto lg:max-w-[280px] xl:max-w-[320px]"
+              className="relative"
             >
-              <div className="aspect-[1/1] rounded-full overflow-hidden bg-gray-100">
+              <div className="aspect-[1/1] rounded-full overflow-hidden bg-gray-100 w-72 h-72 sm:w-[26rem] sm:h-[26rem] md:w-[28rem] md:h-[28rem] lg:w-90 lg:h-90 xl:w-126 xl:h-126 mx-auto">
                 <img
                   src={jordanImage}
                   alt="Jordan - Finance Expert"
@@ -63,13 +63,13 @@ const About: React.FC = () => {
               His insights opened my eyes to the power of property, and I knew I wanted to help others achieve the same success.
               </p>
               <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
-                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
                 Inspired by that experience, I made the decision to leave my aviation course and pursue a career in property. 
                 I obtained the necessary certifications to become a qualified mortgage broker, 
                 with the goal of helping people like myself navigate the property journey and build successful portfolios.
                 </p>
-                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                  My mission is simple: to assist as many people as I can in reaching their property goals, whether it’s financial freedom or building a business. I’m committed to offering the same support and guidance that was offered to me, helping you create the life you desire through smart property investments.
+                  <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
+                  My mission is simple: to assist as many people as I can in reaching their property goals, whether it's financial freedom or building a business. I'm committed to offering the same support and guidance that was offered to me, helping you create the life you desire through smart property investments.
                   </p>
                   
               </div>

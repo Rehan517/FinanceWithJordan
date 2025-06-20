@@ -101,7 +101,7 @@ const HeroSection: React.FC = () => {
           >
             <div className="relative">
               {/* Main Image Container */}
-              <div className="aspect-square bg-gradient-to-br from-primary-100 to-primary-200 rounded-full flex items-center justify-center relative overflow-hidden w-72 h-72 sm:w-[26rem] sm:h-[26rem] md:w-[28rem] md:h-[28rem] lg:w-80 lg:h-80 xl:w-96 xl:h-96 mx-auto">
+              <div className="aspect-square bg-gradient-to-br from-primary-100 to-primary-200 rounded-full flex items-center justify-center relative overflow-hidden w-72 h-72 sm:w-[26rem] sm:h-[26rem] md:w-[28rem] md:h-[28rem] lg:w-90 lg:h-90 xl:w-126 xl:h-126 mx-auto">
                 <img
                   src={jordanPhoto}
                   alt="Jordan - Mortgage Broker"
