@@ -28,7 +28,7 @@ export const SERVICES: Service[] = [
   {
     id: 'investment-property',
     title: 'Investment Property Finance',
-    description: 'Build your property portfolio with strategic financing solutions and tax-effective structures.',
+    description: 'Build your property portfolio with strategic financing solutions and cashflow strategies.',
     icon: 'TrendingUp',
     features: ['Investment Portfolio Strategies', 'Portfolio Building', 'SMSF Investment Lending'],
     ctaText: 'Investment Strategy Consult',
