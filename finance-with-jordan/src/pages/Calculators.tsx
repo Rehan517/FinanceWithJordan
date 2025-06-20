@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Calculator, DollarSign, FileText, ArrowRight } from 'lucide-react';
+import { Calculator, ArrowRight } from 'lucide-react';
 
 const Calculators: React.FC = () => {
   return (
