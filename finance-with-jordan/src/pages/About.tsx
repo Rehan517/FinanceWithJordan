@@ -105,7 +105,7 @@ const About: React.FC = () => {
             className="text-center mb-8 sm:mb-12"
           >
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Our Commitments to You
+              My Commitments to You
             </h2>
           </motion.div>
           <motion.div
