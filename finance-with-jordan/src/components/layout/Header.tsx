@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Mail } from 'lucide-react';
-import { NAVIGATION_ITEMS, CONTACT_INFO } from '@/constants';
-import Button from '@/components/ui/Button';
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, Phone, Mail } from "lucide-react";
+import { NAVIGATION_ITEMS, CONTACT_INFO } from "@/constants";
+import Button from "@/components/ui/Button";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +14,10 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="text-xl font-bold text-primary-900 hover:text-primary-700 transition-colors">
+            <Link
+              to="/"
+              className="text-xl font-bold text-primary-900 hover:text-primary-700 transition-colors"
+            >
               Finance With Jordan
             </Link>
           </div>
@@ -26,7 +29,7 @@ const Header: React.FC = () => {
                 key={item.name}
                 to={item.href}
                 className={`text-gray-700 hover:text-primary-600 px-8 py-2 text-sm font-medium transition-colors relative ${
-                  location.pathname === item.href ? 'text-primary-600' : ''
+                  location.pathname === item.href ? "text-primary-600" : ""
                 }`}
               >
                 {item.name}
@@ -39,8 +42,8 @@ const Header: React.FC = () => {
 
           {/* Contact Info & CTA */}
           <div className="hidden lg:flex items-center space-x-4">
-            <a 
-              href={`tel:${CONTACT_INFO.phone}`} 
+            <a
+              href={`tel:${CONTACT_INFO.phone}`}
               className="flex items-center text-gray-700 hover:text-primary-600 transition-colors"
             >
               <Phone className="h-4 w-4 mr-2" />
@@ -58,7 +61,11 @@ const Header: React.FC = () => {
               className="text-gray-700 hover:text-primary-600 p-2"
               aria-label="Toggle menu"
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
@@ -72,33 +79,35 @@ const Header: React.FC = () => {
                   key={item.name}
                   to={item.href}
                   className={`text-gray-700 hover:text-primary-600 px-3 py-2 text-base font-medium transition-colors ${
-                    location.pathname === item.href ? 'text-primary-600 bg-primary-50' : ''
+                    location.pathname === item.href
+                      ? "text-primary-600 bg-primary-50"
+                      : ""
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
-              
+
               {/* Mobile Contact Info */}
               <div className="pt-4 border-t space-y-3">
-                <a 
-                  href={`tel:${CONTACT_INFO.phone}`} 
+                <a
+                  href={`tel:${CONTACT_INFO.phone}`}
                   className="flex items-center text-gray-700 px-3 py-2 hover:text-primary-600 transition-colors"
                 >
                   <Phone className="h-4 w-4 mr-2" />
                   <span>{CONTACT_INFO.phone}</span>
                 </a>
-                <a 
-                  href={`mailto:${CONTACT_INFO.email}`} 
+                <a
+                  href={`mailto:${CONTACT_INFO.email}`}
                   className="flex items-center text-gray-700 px-3 py-2 hover:text-primary-600 transition-colors"
                 >
                   <Mail className="h-4 w-4 mr-2" />
                   <span>{CONTACT_INFO.email}</span>
                 </a>
                 <div className="px-3">
-                  <Button 
-                    to="/contact" 
+                  <Button
+                    to="/contact"
                     fullWidth
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -114,4 +123,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header; 
+export default Header;
