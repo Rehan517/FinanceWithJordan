@@ -50,7 +50,7 @@ const Header: React.FC = () => {
               <span>{CONTACT_INFO.phone}</span>
             </a>
             <Button to="/contact" size="sm">
-              Get Quote
+              Enquire Now
             </Button>
           </div>
 
